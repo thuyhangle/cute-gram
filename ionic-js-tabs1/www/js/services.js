@@ -47,4 +47,20 @@ angular.module('starter.services', [])
       return null;
     }
   };
+})
+
+.factory('Posts', function () {
+    var posts = [];
+
+    return {
+        all: function () {
+            return posts;
+        },
+        remove: function (post) {
+            posts.splice(posts.indexOf(post), 1);
+        },
+        add: function (post) {
+            posts.push(post);
+        }
+    };
 });

@@ -1,8 +1,12 @@
 angular.module('starter.controllers', ['ionic'])
 
-.controller('DashCtrl', function ($scope) { })
+.controller('DashCtrl', function ($scope, Posts) {
+    $scope.posts = Posts.all();
+})
 .controller('SearchCtrl', function ($scope) { })
-.controller('UploadCtrl', function ($scope) {
+.controller('UploadCtrl', function ($scope, $state, Posts) {
+    $scope.imgURI = "";
+    $scope.data = {};
     $scope.shoot = function () {
         var options = {
             quality: 100,
@@ -15,12 +19,11 @@ angular.module('starter.controllers', ['ionic'])
         };
 
         navigator.camera.getPicture(onSuccess, onFail, options);
-
         function onSuccess(imageURI) {
             var image = document.getElementById('myImage');
             image.src = imageURI;
+            $scope.imgURI = imageURI;
         }
-
         function onFail(message) {
             alert('Failed because: ' + message);
         }
@@ -31,25 +34,37 @@ angular.module('starter.controllers', ['ionic'])
             quality: 100,
             allowEdit: true,
             encodingType: Camera.EncodingType.JPEG,
-            targetWidth: 480,
-            targetHeight: 480,
+            targetWidth: 300,
+            targetHeight: 300,
             destinationType: Camera.DestinationType.FILE_URI,
-            sourceType: Camera.PictureSourceType.CAMERA
+            sourceType: Camera.PictureSourceType.CAMERA,
+            maximumImagesCount: 1
         };
 
         window.imagePicker.getPictures(
             function onSuccess(imageURI) {
                 var image = document.getElementById('myImage');
-                image.src = imageURI;
+                image.src = imageURI[0];
+                $scope.imgURI = imageURI[0];
             },
             function (error) {
                 console.log('Error: ' + error);
             },
-            {
-                maximumImagesCount: 1,
-                width: 800
-            }
+            options
         );
+    };
+
+    $scope.post = function () {
+        Posts.add({
+            imageURI: $scope.imgURI,
+            description: $scope.data.photoCaption 
+        });
+        console.log($scope.data);
+        $state.go('tab.dash', {}, {reload: true});
+    };
+
+    $scope.isPick = function () {
+        return $scope.imgURI !== "";
     };
 })
 .controller('ActivityCtrl', function ($scope) { })
@@ -73,10 +88,8 @@ angular.module('starter.controllers', ['ionic'])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
+.controller('AccountCtrl', function($scope, Posts) {
+    $scope.posts = Posts.all();
 });
 
 
