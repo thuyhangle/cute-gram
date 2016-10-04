@@ -1,19 +1,16 @@
 <ion-view view-title="Dashboard">
   <ion-content class="">
     <ion-list>
-    <!--<ion-item ng-repeat="item in items">
-        Hello, {{item}}!
-    </ion-item>-->
-        <ion-item>
+        <ion-item ng-repeat="post in posts">
             <div class="item-avatar">
                 <img src="img/hang.jpg">
-                <a href="#"><h2>Le Thuy Hang</h2></a>
+                <h2>Le Thuy Hang</h2>
                 <p>November 05, 1955</p>
             </div>
-            <img class="full-image" src="img/hang2.jpg">
+            <img class="full-image" src="{{ post.imageURI }}">
             <div class="item-body">
                 <p>
-                    hello
+                    {{ post.description }}
                 </p>
                 <p class="">
                     <a class="button button-icon" href="#">
@@ -32,179 +29,6 @@
                 </p>
             </div>
         </ion-item>
-        <ion-item>
-            <div class="item-avatar">
-                <img src="img/mike.png">
-                <a href="#"><h2>Marty McFly</h2></a>
-                <p>November 05, 1955</p>
-            </div>
-            <img class="full-image" src="img/ben.png">
-            <div class="item-body">
-                <p>
-                    This is a "Facebook" styled Card. The footer
-                    consists of tabs, icons aligned left, within the card-footer.
-                </p>
-                <p class="">
-                    <a class="button button-icon assertive" href="#">
-                        <i class="icon ion-ios-heart-outline"></i>
-                    </a>
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-chatbubble-outline"></i>
-                    </a>
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-paperplane-outline"></i>
-                    </a>
-                </p>
-                <p>
-                    <a href="#" class="subdued">1 Like</a>
-                    <a href="#" class="subdued">5 Comments</a>
-                </p>
-            </div>
-        </ion-item>
-        <ion-item>
-            <div class="item-avatar">
-                <img src="img/hang.jpg">
-                <a href="#"><h2>Le  Thuy Hang</h2></a>
-                <p>November 05, 2019</p>
-            </div>
-            <img class="full-image" src="img/bike.jpg">
-            <div class="item-body">
-                <p>
-                    This is a "Facebook" styled Card. The footer
-                    consists of tabs, icons aligned left, within the card-footer.
-                </p>
-                <p class="">
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-heart-outline"></i>
-                    </a>
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-chatbubble-outline"></i>
-                    </a>
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-paperplane-outline"></i>
-                    </a>
-                </p>
-                <p>
-                    <a href="#" class="subdued">10 Like</a>
-                    <a href="#" class="subdued">2 Comments</a>
-                </p>
-            </div>
-        </ion-item>
-        <ion-item>
-            <div class="item-avatar">
-                <img src="img/hang.jpg">
-                <a href="#"><h2>Le  Thuy Hang</h2></a>
-                <p>November 05,2055</p>
-            </div>
-            <img class="full-image" src="img/fall3.jpg">
-            <div class="item-body">
-                <p>
-                    This is a "Facebook" styled Card. The footer
-                    consists of tabs, icons aligned left, within the card-footer.
-                </p>
-                <p class="">
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-heart-outline assertive"></i>
-                    </a>
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-chatbubble-outline"></i>
-                    </a>
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-paperplane-outline"></i>
-                    </a>
-                </p>
-                <p>
-                    <a href="#" class="subdued">1 Like</a>
-                    <a href="#" class="subdued">5 Comments</a>
-                </p>
-            </div>
-        </ion-item>
-        
-        <ion-item>
-            <div class="item-avatar" href="#">
-                <img src="img/perry.png">
-                <a href="#"><h2>Mr Cute</h2></a>
-                <p>November 05, 1955</p>
-            </div>
-            <img class="full-image" src="img/adam.jpg">
-            <div class="item-body">
-                <p>
-                    HUhuhuhu hihi
-                </p>
-                <p class="">
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-heart-outline assertive"></i>
-                    </a>
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-chatbubble-outline"></i>
-                    </a>
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-paperplane-outline"></i>
-                    </a>
-                </p>
-                <p>
-                    <a href="#" class="subdued">1 Like</a>
-                    <a href="#" class="subdued">5 Comments</a>
-                </p>
-            </div>
-        </ion-item>
-        <ion-item>
-            <div class="item-avatar">
-                <img src="img/mike.png">
-                <a href="#"><h2>Ugly Boy</h2></a>
-                <p>September 05, 2016</p>
-            </div>
-            <img class="full-image" src="img/ionic.png">
-            <div class="item-body">
-                <p>
-                    This is a "Facebook" styled Card. The header is created from a Thumbnail List item
-                </p>
-                <p class="">
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-heart-outline assertive"></i>
-                    </a>
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-chatbubble-outline"></i>
-                    </a>
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-paperplane-outline"></i>
-                    </a>
-                </p>
-                <p>
-                    <a href="#" class="subdued">1 Like</a>
-                    <a href="#" class="subdued">5 Comments</a>
-                </p>
-            </div>
-        </ion-item>
-        <ion-item>
-            <div class="item-avatar">
-                <img src="img/hang.jpg">
-                <a href="#"><h2>Marty McFly</h2></a>
-                <p>November 05, 1955</p>
-            </div>
-            <img class="full-image" src="img/bike.jpg">
-            <div class="item-body">
-                <p>
-                    This is a "Facebook" styled Card. The footer
-                    consists of tabs, icons aligned left, within the card-footer.
-                </p>
-                <p class="">
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-heart-outline"></i>
-                    </a>
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-chatbubble-outline"></i>
-                    </a>
-                    <a class="button button-icon" href="#">
-                        <i class="icon ion-ios-paperplane-outline"></i>
-                    </a>
-                </p>
-                <p>
-                    <a href="#" class="subdued">1 Like</a>
-                    <a href="#" class="subdued">78 Comments</a>
-                </p>
-            </div>
-        </ion-item>
-</ion-list>
+    </ion-list>
   </ion-content>
 </ion-view>

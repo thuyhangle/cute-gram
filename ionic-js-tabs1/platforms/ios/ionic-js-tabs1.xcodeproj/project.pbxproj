@@ -38,6 +38,10 @@
 		71E0B11A52A249369470DB53 /* ELCAssetTablePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63BC8B4DE2544B3FB05BC861 /* ELCAssetTablePicker.xib */; };
 		FF3A3500C4574FAAB58D5C6C /* Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 35DA880065DF44BF87CEE438 /* Overlay.png */; };
 		7067E04CDD3944289D8438FE /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ACBB6CAC18024E218E798FED /* Overlay@2x.png */; };
+		ABD18BC8CFF143869169B0EE /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = B1BE4C5292024322A706EBBE /* CDVFile.m */; };
+		B9079E18E1844D1DB24A0723 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84619F80203B4CCB8DB07C80 /* CDVLocalFilesystem.m */; };
+		99DE5F263EE349C0BA13A553 /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = D315D52C8512420199B0F179 /* CDVAssetLibraryFilesystem.m */; };
+		86018C2B30E34E9F877F11D5 /* CDVFileTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = E7701E18630847D8A494CB4E /* CDVFileTransfer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +122,14 @@
 		63BC8B4DE2544B3FB05BC861 /* ELCAssetTablePicker.xib */ = {isa = PBXFileReference; name = "ELCAssetTablePicker.xib"; path = "ELCAssetTablePicker.xib"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = file.xib; explicitFileType = undefined; includeInIndex = 0; };
 		35DA880065DF44BF87CEE438 /* Overlay.png */ = {isa = PBXFileReference; name = "Overlay.png"; path = "Overlay.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		ACBB6CAC18024E218E798FED /* Overlay@2x.png */ = {isa = PBXFileReference; name = "Overlay@2x.png"; path = "Overlay@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B1BE4C5292024322A706EBBE /* CDVFile.m */ = {isa = PBXFileReference; name = "CDVFile.m"; path = "cordova-plugin-file/CDVFile.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		84619F80203B4CCB8DB07C80 /* CDVLocalFilesystem.m */ = {isa = PBXFileReference; name = "CDVLocalFilesystem.m"; path = "cordova-plugin-file/CDVLocalFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		D315D52C8512420199B0F179 /* CDVAssetLibraryFilesystem.m */ = {isa = PBXFileReference; name = "CDVAssetLibraryFilesystem.m"; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		04EB390C666E4EAC9D6B66B3 /* CDVFile.h */ = {isa = PBXFileReference; name = "CDVFile.h"; path = "cordova-plugin-file/CDVFile.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		3F9DB7723A9B4718ADBF188E /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; name = "CDVLocalFilesystem.h"; path = "cordova-plugin-file/CDVLocalFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		10EFEBD80CF14861AF9F7113 /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; name = "CDVAssetLibraryFilesystem.h"; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E7701E18630847D8A494CB4E /* CDVFileTransfer.m */ = {isa = PBXFileReference; name = "CDVFileTransfer.m"; path = "cordova-plugin-file-transfer/CDVFileTransfer.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		53EDE21E2BF24FA895E6F089 /* CDVFileTransfer.h */ = {isa = PBXFileReference; name = "CDVFileTransfer.h"; path = "cordova-plugin-file-transfer/CDVFileTransfer.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +276,14 @@
 				5E7930737A2043978E003C5D /* ELCAssetSelectionDelegate.h */,
 				0BC49AD22F414603B223B26A /* ELCAssetTablePicker.h */,
 				031F0141EB034645901F6688 /* ELCImagePickerController.h */,
+				B1BE4C5292024322A706EBBE /* CDVFile.m */,
+				84619F80203B4CCB8DB07C80 /* CDVLocalFilesystem.m */,
+				D315D52C8512420199B0F179 /* CDVAssetLibraryFilesystem.m */,
+				04EB390C666E4EAC9D6B66B3 /* CDVFile.h */,
+				3F9DB7723A9B4718ADBF188E /* CDVLocalFilesystem.h */,
+				10EFEBD80CF14861AF9F7113 /* CDVAssetLibraryFilesystem.h */,
+				E7701E18630847D8A494CB4E /* CDVFileTransfer.m */,
+				53EDE21E2BF24FA895E6F089 /* CDVFileTransfer.h */,
 			);
 			name = Plugins;
 			path = "ionic-js-tabs1/Plugins";
@@ -398,6 +418,10 @@
 				2861DB92534741A8AF033649 /* ELCAssetCell.m in Sources */,
 				59ACABAAA2634A5B8B889F64 /* ELCAssetTablePicker.m in Sources */,
 				9CE62AAF45334A67A4573EA4 /* ELCImagePickerController.m in Sources */,
+				ABD18BC8CFF143869169B0EE /* CDVFile.m in Sources */,
+				B9079E18E1844D1DB24A0723 /* CDVLocalFilesystem.m in Sources */,
+				99DE5F263EE349C0BA13A553 /* CDVAssetLibraryFilesystem.m in Sources */,
+				86018C2B30E34E9F877F11D5 /* CDVFileTransfer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

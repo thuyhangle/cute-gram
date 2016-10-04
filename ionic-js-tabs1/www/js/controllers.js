@@ -1,7 +1,10 @@
 angular.module('starter.controllers', ['ionic'])
 
 .controller('DashCtrl', function ($scope, Posts) {
-    $scope.posts = Posts.all();
+    Posts.all().success(function (data) {
+        $scope.posts = data;
+        console.log(data);
+    });
 })
 .controller('SearchCtrl', function ($scope) { })
 .controller('UploadCtrl', function ($scope, $state, Posts) {
@@ -55,11 +58,6 @@ angular.module('starter.controllers', ['ionic'])
     };
 
     $scope.post = function () {
-        Posts.add({
-            imageURI: $scope.imgURI,
-            description: $scope.data.photoCaption 
-        });
-        console.log($scope.data);
         $state.go('tab.dash', {}, {reload: true});
     };
 

@@ -25,14 +25,14 @@
             <div class="item">
                 <img ng-src="{{img}}" id="myImage" />
                 <div class="button-bar">
-                    <button class="button" ng-click="camera()">From Camera</button>
+                    <button class="button" ng-click="shoot()">From Camera</button>
                     <button class="button" ng-click="picker()">From Gallery</button>
                 </div>
             </div>
 
             <label class="item item-input item-floating-label">
                 <span class="input-label">Caption</span>
-                <textarea placeholder="Caption" ng-model="data.description"></textarea>
+                <textarea placeholder="Caption" ng-model="data.photoCaption"></textarea>
             </label>
 
             <div class="item">

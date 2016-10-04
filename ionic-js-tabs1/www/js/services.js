@@ -49,18 +49,10 @@ angular.module('starter.services', [])
   };
 })
 
-.factory('Posts', function () {
-    var posts = [];
-
+.factory('Posts', function ($http) {
     return {
         all: function () {
-            return posts;
-        },
-        remove: function (post) {
-            posts.splice(posts.indexOf(post), 1);
-        },
-        add: function (post) {
-            posts.push(post);
+            return $http.get("https://instagram-server.herokuapp.com/");
         }
     };
 });
