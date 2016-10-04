@@ -50,6 +50,35 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.search', {
+      url: '/search',
+      views: {
+          'tab-search': {
+              templateUrl: 'templates/tab-search.html',
+              controller: 'SearchCtrl'
+          }
+      }
+  })
+
+  .state('tab.upload', {
+      url: '/upload',
+      views: {
+          'tab-upload': {
+              templateUrl: 'templates/tab-upload.html',
+              controller: 'UploadCtrl'
+          }
+      }
+  })
+      
+  .state('tab.activity', {
+      url: '/activity',
+      views: {
+          'tab-activity': {
+              templateUrl: 'templates/tab-activity.html',
+              controller: 'ActivityCtrl'
+      }
+    }
+  })
   .state('tab.chats', {
       url: '/chats',
       views: {
@@ -83,3 +112,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $urlRouterProvider.otherwise('/tab/dash');
 
 });
+
+
+//angular.module('starter', ['ionic', 'ngCordova'])
+
+
+

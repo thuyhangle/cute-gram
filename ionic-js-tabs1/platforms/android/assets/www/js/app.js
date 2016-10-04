@@ -112,3 +112,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $urlRouterProvider.otherwise('/tab/dash');
 
 });
+
+
+//angular.module('starter', ['ionic', 'ngCordova'])
+
+
+

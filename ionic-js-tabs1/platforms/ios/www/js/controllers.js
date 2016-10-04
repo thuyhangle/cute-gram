@@ -1,6 +1,32 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ionic'])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function ($scope) { })
+.controller('SearchCtrl', function ($scope) { })
+.controller('UploadCtrl', function ($scope) {
+    $scope.camera = function () {
+        var options = {
+            quality: 100,
+            allowEdit: true,
+            encodingType: Camera.EncodingType.JPEG,
+            targetWidth: 480,
+            targetHeight: 480,
+            destinationType: Camera.DestinationType.FILE_URI,
+            sourceType: Camera.PictureSourceType.CAMERA
+        };
+
+        navigator.camera.getPicture(onSuccess, onFail, options);
+
+        function onSuccess(imageURI) {
+            var image = document.getElementById('myImage');
+            image.src = imageURI;
+        }
+
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
+    };
+})
+.controller('ActivityCtrl', function ($scope) { })
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
@@ -26,3 +52,5 @@ angular.module('starter.controllers', [])
     enableFriends: true
   };
 });
+
+

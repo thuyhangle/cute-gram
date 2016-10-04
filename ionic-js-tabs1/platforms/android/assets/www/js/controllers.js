@@ -1,8 +1,57 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ionic'])
 
 .controller('DashCtrl', function ($scope) { })
 .controller('SearchCtrl', function ($scope) { })
-.controller('UploadCtrl', function ($scope) { })
+.controller('UploadCtrl', function ($scope) {
+    $scope.shoot = function () {
+        var options = {
+            quality: 100,
+            allowEdit: true,
+            encodingType: Camera.EncodingType.JPEG,
+            targetWidth: 480,
+            targetHeight: 480,
+            destinationType: Camera.DestinationType.FILE_URI,
+            sourceType: Camera.PictureSourceType.CAMERA
+        };
+
+        navigator.camera.getPicture(onSuccess, onFail, options);
+
+        function onSuccess(imageURI) {
+            var image = document.getElementById('myImage');
+            image.src = imageURI;
+        }
+
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
+    };
+
+    $scope.picker = function () {
+        var options = {
+            quality: 100,
+            allowEdit: true,
+            encodingType: Camera.EncodingType.JPEG,
+            targetWidth: 480,
+            targetHeight: 480,
+            destinationType: Camera.DestinationType.FILE_URI,
+            sourceType: Camera.PictureSourceType.CAMERA
+        };
+
+        window.imagePicker.getPictures(
+            function onSuccess(imageURI) {
+                var image = document.getElementById('myImage');
+                image.src = imageURI;
+            },
+            function (error) {
+                console.log('Error: ' + error);
+            },
+            {
+                maximumImagesCount: 1,
+                width: 800
+            }
+        );
+    };
+})
 .controller('ActivityCtrl', function ($scope) { })
 
 .controller('ChatsCtrl', function($scope, Chats) {

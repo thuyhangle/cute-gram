@@ -1,14 +1,7 @@
 ﻿<ion-view view-title="Upload">
-    <ion-content class="padding">
+ <!--<ion-content class="padding">
         <ion-item class="align--center">
             <h2>Turn on camera to capture photo</h2>
-           
-                <!--<a class="subdued button button-icon active" href="#">
-                    <i class="icon ion-ios-paperlane-outline"></i>
-                </a>
-                <a class="subdued button button-icon active" href="#">
-                    <i class="icon ion-ios-paperlane-outline"></i>
-                </a>-->
             
             <a class="subdued" href="#">
                 <i class="icon ion-ios-camera-outline icon--full-width"></i>
@@ -16,5 +9,37 @@
             
         </ion-item>
         
-    </ion-content> 
+    </ion-content>
+     <ion-content ng-controller="UploadController" padding="true">
+        <button class="button button-full button-assertive" ng-click="takePhoto()">
+            Take Photo
+        </button>
+        <button class="button button-full button-assertive" ng-click="choosePhoto()">
+            Choose Photo
+        </button>
+       <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="text-align: center">
+    </ion-content> --> 
+
+    <ion-content>
+        <div class="list card pick-image">
+            <div class="item">
+                <img ng-src="{{img}}" id="myImage" />
+                <div class="button-bar">
+                    <button class="button" ng-click="shoot()">From Camera</button>
+                    <button class="button" ng-click="picker()">From Gallery</button>
+                </div>
+            </div>
+
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Caption</span>
+                <textarea placeholder="Caption" ng-model="data.description"></textarea>
+            </label>
+
+            <div class="item">
+                <button ng-click="post()" ng-disabled="!isPick()" class="button button-block button-positive">
+                    Post
+                </button>
+            </div>
+        </div>
+    </ion-content>
 </ion-view>

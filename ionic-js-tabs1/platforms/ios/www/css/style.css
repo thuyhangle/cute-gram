@@ -1,1 +1,23 @@
 ﻿/* Empty. Add your own CSS if you like */
+td {
+    font-size: small;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+th{
+    font-weight: bold
+}
+.align--center {
+    text-align: center;
+}
+.icon--full-width {
+    font-size: 300px;
+}
+.search-results__list {
+    text-align: center;
+    display: block;
+}
+.search-results__item {
+    width: 84px;
+    min-height: 84px;
+}
